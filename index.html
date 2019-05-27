@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>±í°×ÐÅ</title>
+</head>
+<style type="text/css">
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    #body{
+        width: auto;
+        height: 1000px;
+        background-color: #cccccc;
+        padding-top: 100px;
+    }
+    .container{
+        margin: 0px auto;
+        height:400px;
+        width: 800px;
+        background-color: chartreuse;
+    }
+    .left{
+        height: 100%;
+        width: 50%;
+        background-color: cornflowerblue;
+        float: left;
+    }
+    .right{
+        height: 100%;
+        width: 50%;
+        background-color: bisque;
+        float: left;
+    }
+    .message{
+        position: relative;
+        top: 50px;
+        left:125px;
+        font-family: Ï²ÂúÌå;
+    }
+    .image{
+        width: 100%;
+        height: 100%;
+    }
+    .yes{
+        width: 100px;
+        height: auto;
+        position: relative;
+        left:120px;
+        top: 150px;
+        border-radius:8px;
+        text-align: center;
+        font-family: ººÒÇµûÓïÌå¼ò;
+    }
+    .no{
+        width: 100px;
+        height: auto;
+        position: relative;
+        left:20px;
+        top: 200px;
+        border-radius:8px;
+        text-align: center;
+        font-family: ººÒÇµûÓïÌå¼ò;
+    }
+    #thank{
+        position: relative;
+        text-align: center;
+        font-family:Ï²ÂúÌå;
+        font-size: 50px;
+        top: 125px;
+        left: 25px;
+        color: rgba(0,0,0,0);
+    }
+</style>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    function move() {
+        $(".no").css("top",function () {
+            var s =""+Math.random()*500+"px";
+            return s;
+        });
+        $(".no").css("left",function () {
+            var s =""+Math.random()*500+"px";
+            return s;
+        })
+    }
+    function yes() {
+        $(".no").hide();
+        $(".yes").hide();
+        $("#thank").css("color","rgba(0,0,0,1)");
+        $("#thank").show();
+    }
+    function yincang() {
+        $("#thank").hide();
+    }
+</script>
+<body onload="yincang()">
+    <div id="body">
+        <div class="container">
+            <div class="left">
+                <h1 class="message">±í°×ÐÅ</h1>
+                <button class="yes" onclick="yes()">Í¬Òâ</button>
+                <button class="no" onmouseover="move()">¹öÄÇ</button>
+                <h5 id="thank">Ð»Ð»Ï±¸¾¶ù£¡£¡</h5>
+            </div>
+            <div class="right">
+                <img src="u=1218984838,2739514110&fm=27&gp=0.jpg" class="image" >
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
